@@ -99,3 +99,34 @@ const tabuada = (A = 10) =>{
 }
 }
 tabuada();
+//
+const loopSemLoop = (n,m) =>{
+    if(n < 10){
+        console.log("Função Parou");
+    }else{
+        const x = n - m;
+        console.log(x);
+        loopSemLoop(x,m);
+    }
+}
+loopSemLoop(100,5);
+//
+function fatorial(x){
+    if(x === 0){
+        return 1;
+    }else{
+        return x * fatorial(x -1);
+    }
+}
+console.log(fatorial(4));
+//
+function baskara(a,b,c){
+    const delta = b ** 2 - 4 * a * c ;
+    const raiz = Math.sqrt(delta);
+    const x1 = (-b + raiz) / (2 * a);
+    const x2 = (-b - raiz) / (2 * a);
+    console.log(`A raiz quadrada de ${delta} é ${raiz}`);
+    console.log(`X1 e X2 são respectivamente ${x1} e ${x2}`);
+}
+baskara(1,12,-13);
+baskara(2,12,-14);
