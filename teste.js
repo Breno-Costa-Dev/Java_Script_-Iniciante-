@@ -1,4 +1,4 @@
-//Operadoes e seus tipos
+//Operadores e seus tipos
 const variavel1 = 1;
 const variavel2 = "Olá Mundo";
 const variavel3 = true;
@@ -27,15 +27,61 @@ console.log(teste3);
 console.log(teste4);
 //
 
-const recebe = prompt("Digite seu nome");
-console.log(`Olá ${recebe},seja-bem vindo!`);
+// const recebe = prompt("Digite seu nome");
+//console.log(`Olá ${recebe},seja-bem vindo!`);
 
 console.error("Sinalizando Erro!");
 console.warn("Sinalizando aviso aqui");
 
-//Estruturas de Controle
+//Estruturas de Controle e Repetição
 
 //IF e IF e Else
+
+if(false){
+
+}else if(false){
+
+}else if(true){
+    console.log("Esta condição é verdadeira");
+}
+
+if(5 > 1){
+    console.log("5 é maior 1");
+}
+
+if(5 < 1){
+    console.log("5 é menor que 1");
+}else{
+    console.log("5 não é menor que 1");
+}
+
+if( 5 > 10){
+    console.log(".");
+}else if(5 < 10){
+    console.log("5 é menor que 10");
+}
+
+//Loops
+
+// While
+
+let p = 0;
+
+while (p < 5){
+    p = p + 1;
+    console.log(`${p}`);
+}
+
+//For
+
+for(let i = 0; i < 10; i++){
+   console.log(`Loop ${i}`);
+}
+
+
+
+
+
 
 //Functions
 function primeiroModo(){
@@ -46,7 +92,7 @@ primeiroModo();
 const segundoModo = function(texto){
     console.log(`Olá meu nome é ${texto}`);
 }
-segundoModo("Breno");
+segundoModo("Breno Costa");
 //
 const terceiroModoArrow = (x) =>{
 console.log(`a definição dessa função se chama ${x}`);
