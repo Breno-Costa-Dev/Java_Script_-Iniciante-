@@ -1,3 +1,43 @@
+//Operadoes e seus tipos
+const variavel1 = 1;
+const variavel2 = "Olá Mundo";
+const variavel3 = true;
+const variavel4 = 2.5;
+const variavel5 = undefined;
+const variavel6 = null;
+
+console.log(`${variavel1}, ${variavel2}, ${variavel3}, ${variavel4}, ${variavel5}, ${variavel6}`);
+
+console.log(typeof(variavel1));
+console.log(typeof(variavel2));
+console.log(typeof(variavel3));
+console.log(typeof(variavel4));
+console.log(typeof(variavel5));
+console.log(typeof(variavel6));
+
+//Booleanos
+const teste = 5 > 2;
+console.log(teste);
+
+const teste2 = 10 < 5 && 2 < 3;
+const teste3 = 10 < 5 || 2 < 3;
+const teste4 = "5" === 5 && 2 < 3;
+console.log(teste2);
+console.log(teste3);
+console.log(teste4);
+//
+
+const recebe = prompt("Digite seu nome");
+console.log(`Olá ${recebe},seja-bem vindo!`);
+
+console.error("Sinalizando Erro!");
+console.warn("Sinalizando aviso aqui");
+
+//Estruturas de Controle
+
+//IF e IF e Else
+
+//Functions
 function primeiroModo(){
     console.log("Olá!");
 }
