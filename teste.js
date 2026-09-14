@@ -78,10 +78,67 @@ for(let i = 0; i < 10; i++){
    console.log(`Loop ${i}`);
 }
 
+for(let x = 10; x >= 1; x--){
+    console.log(`${x}`);
+}
 
+//
+for(i = 1; i <= 10; i++){
+    if(i %2 == 0){
+        console.log(`${i} é numero par`);
+    }else if(i % 2 ==! 0){
+        console.log(`${i} este numero é impar`)
+    }
+}
 
+//
 
+for(let i = 0; i < 100; i++){
+    if(i === 5){
+        console.log(`For foi parado no ${i}`);
+        break;
+    }
+}
 
+// Switchs
+const profissao = "Programador";
+
+switch (profissao){
+    case "Programador":
+    console.log("Você é Programador");
+    break;
+    case "Advogado":
+    console.log("Você é Advogado");
+    break;
+    default:
+        console.log("Profissão não encontrada")
+}
+
+let idade = 18;
+
+switch (true){
+    case idade >= 18:
+        console.log("Você é Maior de idade");
+        break;
+            default:
+                console.log("Você é menor de idade");
+}
+
+const estadoCivil = "Namorando";
+
+switch (estadoCivil){
+    case "Solteiro(a)":
+        console.log("Estado Civil do Paciente é Solteiro(a)");
+        break;
+         case "Casado(a)":
+        console.log("Estado Civil do Paciente é Casado(a)");
+        break;
+         case "Viuvo(a)":
+        console.log("Estado Civil do Paciente é Viuvo(a)");
+        break;
+        default:
+            console.log("Estado Civil inválido!")
+}
 
 //Functions
 function primeiroModo(){
