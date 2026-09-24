@@ -310,6 +310,18 @@ console.log(lista.indexOf(10));
 const lista2 = lista.slice(3,5 + 1);
 console.log(lista);
 console.log(lista2);
+
+lista.forEach(function(numero) {
+    console.log(`Analisando o numero; ${numero}`);
+});
+
+console.log(lista.includes(0));
+console.log(lista.includes(10));
+
+lista.reverse();
+console.log(lista);
+//
+//Padstart aqui:.......
 //
 const um = ["Matheus","Antonio"];
 const dois = ["Bruno","Célia"];
@@ -317,6 +329,41 @@ const dois = ["Bruno","Célia"];
 const tres = um.concat(dois);
 
 console.log(tres);
+
+const loop = ["a","b","c","d","e","f","g","h","i","j"];
+
+for(let i = 0; i < loop.length; i++){
+    console.log(`Verificando elemento ${loop[i]}`);
+}
+
+const frutas = ["Maçâ","Uva","Manga","Perâ","Morango","Amora","Limão"];
+
+for(let i = 0; i < frutas.length; i++){
+    if( frutas[i] === "Morango"){
+        console.log(`${frutas[i]} Encontrado!`);
+        break;
+    }else{
+        console.log("Procurando...");
+    }
+}
+
+//
+let encontrado = false;
+
+for(let i = 0; i < frutas.length; i++){
+    if(frutas[i] === "Banana"){
+        console.log(`${frutas[i]} Encontrado!!`);
+        encontrado = true;
+        break;
+    }
+console.log("Procurando.......");
+}
+
+if(encontrado === false){
+    console.log("Não Encontrado!");
+}
+//
+
 // Objetos
 const aluno1 = {
     nome:"Alice",
@@ -379,36 +426,51 @@ console.log(a);
 
 delete b.nome;
 console.log(a);
-//
-const loop = ["a","b","c","d","e","f","g","h","i","j"];
 
-for(let i = 0; i < loop.length; i++){
-    console.log(`Verificando elemento ${loop[i]}`);
+//Objetos Literals
+const person = {
+    nome: "Breno",
+    idade: 23,
+    prof: "Dev",
+}
+console.log(person);
+
+person.pais = "Brazil";
+console.log(person);
+
+delete person.idade;
+console.log(person);
+console.log(person instanceof Object);
+
+const moto1 = {
+    rodas: 2,
+    cilindradas: 249,
+    cor: "Preta",
 }
 
-const frutas = ["Maçâ","Uva","Manga","Perâ","Morango","Amora","Limão"];
+const moto2 = {
 
-for(let i = 0; i < frutas.length; i++){
-    if( frutas[i] === "Morango"){
-        console.log(`${frutas[i]} Encontrado!`);
-        break;
-    }else{
-        console.log("Procurando...");
-    }
+}
+console.log(moto1);
+console.log(moto2);
+
+Object.assign(moto2,moto1);
+console.log(moto2);
+
+console.log(Object.keys(moto1));
+console.log(Object.keys(person));
+
+console.log(Object.entries(moto1));
+console.log(Object.entries(person));
+
+const objA = {
+    nome: "Breno",
 }
 
-//
-let encontrado = false;
+const objB = objA;
 
-for(let i = 0; i < frutas.length; i++){
-    if(frutas[i] === "Banana"){
-        console.log(`${frutas[i]} Encontrado!!`);
-        encontrado = true;
-        break;
-    }
-console.log("Procurando.......");
-}
+console.log(objA);
+console.log(objB);
 
-if(encontrado === false){
-    console.log("Não Encontrado!");
-}
+objA.moedas = 10;
+console.log(objB);
