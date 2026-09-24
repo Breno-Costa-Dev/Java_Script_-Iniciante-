@@ -274,8 +274,6 @@ function baskara(a,b,c){
 baskara(1,12,-13);
 baskara(2,12,-14);
 
-console.clear();
-
 //Arrays
 
 const lista = [1,2,3,4,5];
@@ -285,13 +283,40 @@ console.log(lista[0]);
 console.log(typeof(lista));
 console.log(lista.length);
 
+lista.push("6","7");
+console.log(lista);
+
+lista.pop();
+console.log(lista);
+
+const removidoPop = lista.pop();
+console.log(lista);
+console.log(removidoPop);
+
+lista.shift();
+console.log(lista);
+
+const removidoShift = lista.shift();
+console.log(lista);
+console.log(removidoShift);
+
+lista.unshift(-1,0,1,1,2);
+console.log(lista);
+
+console.log(lista.indexOf(1));
+console.log(lista.lastIndexOf(1));
+console.log(lista.indexOf(10));
+
+const lista2 = lista.slice(3,5 + 1);
+console.log(lista);
+console.log(lista2);
+//
 const um = ["Matheus","Antonio"];
 const dois = ["Bruno","Célia"];
 
 const tres = um.concat(dois);
 
 console.log(tres);
-
 // Objetos
 const aluno1 = {
     nome:"Alice",
