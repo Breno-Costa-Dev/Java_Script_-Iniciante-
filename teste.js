@@ -274,6 +274,24 @@ function baskara(a,b,c){
 baskara(1,12,-13);
 baskara(2,12,-14);
 
+function somainfinita(...abc){
+    let total = 0;
+    for(let i = 0; i < abc.length; i++){
+        total += abc[i];
+    }
+    return total;
+}
+console.log(somainfinita(10,30,30));
+
+const somainfinita2 = (... abc) => {
+    let total =  0;
+    for(num of abc){
+        total += num;
+    }
+    return total;
+}
+console.log(somainfinita2(50,24,12));
+
 //Arrays
 
 const lista = [1,2,3,4,5];
@@ -320,9 +338,7 @@ console.log(lista.includes(10));
 
 lista.reverse();
 console.log(lista);
-//
-//Padstart aqui:.......
-//
+
 const um = ["Matheus","Antonio"];
 const dois = ["Bruno","Célia"];
 
@@ -380,7 +396,7 @@ console.log(aluno1);
 
 delete aluno1.idade;
 console.log(aluno1);
-//
+
 const umObj = {
     nome:"Mario",
     idade: 18
@@ -427,50 +443,44 @@ console.log(a);
 delete b.nome;
 console.log(a);
 
-//Objetos Literals
-const person = {
+const phone = " 99348593";
+const addPhone = phone.padStart(11,"55");
+console.log(addPhone);
+
+const addEndPhone = phone.padEnd(10,"0");
+console.log(addEndPhone);
+
+const funcionarios = "Alex,Antonio,Maria,João,Aline";
+const arrayFuncionarios = funcionarios.split(",");
+console.log(arrayFuncionarios);
+
+const stringJoin = " Funcionario ";
+const novostring = arrayFuncionarios.join(stringJoin);
+console.log(novostring);
+
+console.log(stringJoin.repeat(4));
+
+const myObj = {
     nome: "Breno",
-    idade: 23,
+    sobrenome: "Costa",
     prof: "Dev",
 }
-console.log(person);
+const {prof:myProf} = myObj;
+console.log(myProf);
 
-person.pais = "Brazil";
-console.log(person);
+const myArray = ["1","2","3"];
+const [veiculoA,veiculoB,veiculoC] = myArray;
+console.log(veiculoA);
+console.log(veiculoB);
+console.log(veiculoC);
 
-delete person.idade;
-console.log(person);
-console.log(person instanceof Object);
 
-const moto1 = {
-    rodas: 2,
-    cilindradas: 249,
-    cor: "Preta",
-}
+const myJSon = '{"nome": "Breno","age": 23, "skills": ["PHP","JS","Python"]}';
 
-const moto2 = {
+const myNewObjt = JSON.parse(myJSon);
+console.log(myNewObjt);
+console.log(myJSon);
 
-}
-console.log(moto1);
-console.log(moto2);
+const myNewJSon = JSON.stringify(myObj);
+console.log(myNewJSon);
 
-Object.assign(moto2,moto1);
-console.log(moto2);
-
-console.log(Object.keys(moto1));
-console.log(Object.keys(person));
-
-console.log(Object.entries(moto1));
-console.log(Object.entries(person));
-
-const objA = {
-    nome: "Breno",
-}
-
-const objB = objA;
-
-console.log(objA);
-console.log(objB);
-
-objA.moedas = 10;
-console.log(objB);
