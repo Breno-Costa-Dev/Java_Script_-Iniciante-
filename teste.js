@@ -483,7 +483,6 @@ console.log(myJSon);
 
 const myNewJSon = JSON.stringify(myObj);
 console.log(myNewJSon);
-console.clear();
 
 //POO
 const animal = {
