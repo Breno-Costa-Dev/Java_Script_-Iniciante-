@@ -483,4 +483,98 @@ console.log(myJSon);
 
 const myNewJSon = JSON.stringify(myObj);
 console.log(myNewJSon);
+console.clear();
+
+//POO
+const animal = {
+    nome: "Bob",
+    latir: function(){
+        console.log("AUAU!");
+    },
+};
+console.log(animal);
+console.log(animal.nome);
+animal.latir();
+
+animal.getnome = function(){
+        return this.nome;
+    };
+
+console.log(animal.getnome());
+console.log(animal);
+
+animal.setnome = function(novonome){
+    this.nome = novonome;
+};
+
+animal.setnome("Bravo");
+console.log(animal.getnome());
+//
+const  text = "abc";
+console.log(Object.getPrototypeOf(text));
+ const protObj = {
+    a: "b",
+ }
+ const protSecObj = Object.create(protObj);
+ console.log(protSecObj);
+ console.log(protSecObj.a);
+
+ const cachoro = {
+    raca: null,
+ }
+
+ const pastorAlemao = Object.create(cachoro);
+ pastorAlemao.raca = "Pastor Alemão";
+ console.log(pastorAlemao);
+
+ cachoro.patas = 4;
+
+ console.log(pastorAlemao.patas);
+
+ //functions construtoras
+ function criarCachorro(nome,raca){
+    const cachoro = Object.create({});
+    cachoro.nome = nome;
+    cachoro.raca = raca;
+    return cachoro;
+ }
+ const bob = criarCachorro("Bob","Puddler");
+ console.log(bob);
+
+ function animais(nome,patas){
+    this.nome = nome;
+    this.patas = patas;
+ }
+  animais.prototype.ruivar = function(){
+    console.log("Auu");
+ }
+ const panda = new animais("panda",4);
+ console.log(panda);
+ panda.ruivar();
+
+ //Classes
+ class GatoClass{
+    constructor(nome,raca){
+        this.nome = nome;
+        this.raca = raca;
+    }
+ }
+ const pretin = new GatoClass("Pretin","Preto Puro");
+ console.log(pretin);
+
+ class Caminhao {
+    constructor(eixos,cor){
+        this.eixos = eixos;
+        this.cor = cor;
+    }
+    descreverCaminhao(){
+        console.log(`Este caminhão é da cor ${this.cor} e tem ${this.eixos} eixos`);
+    }
+ }
+ const scania = new Caminhao(6, "Vermelho");
+ console.log(scania);
+ scania.descreverCaminhao();
+ Caminhao.prototype.rodas = 4;
+
+
 
