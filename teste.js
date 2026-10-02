@@ -508,6 +508,7 @@ animal.setnome = function(novonome){
 
 animal.setnome("Bravo");
 console.log(animal.getnome());
+
 //
 const  text = "abc";
 console.log(Object.getPrototypeOf(text));
@@ -575,5 +576,130 @@ console.log(Object.getPrototypeOf(text));
  scania.descreverCaminhao();
  Caminhao.prototype.rodas = 4;
 
+ class Pacientes {
+    constructor(nome,doenca,gravidade){
+        this.nome = nome;
+        this.doenca = doenca
+        this.gravidade = gravidade;
+    }
+}
 
+const paciente01 = new Pacientes("Roberto","Pneumonia","10");
+const paciente02 = new Pacientes("Anderson","Virose","9");
+const paciente03 = new Pacientes("Alice","Febre","8");
+const paciente04 = new Pacientes("Bruno","Febre","7");
+const paciente05 = new Pacientes("Paulo","Tetano","6");
+const paciente06 = new Pacientes("Mario","Dor de Cabeça","5");
+const paciente07 = new Pacientes("Natalia","Escoriações","4");
+const paciente08 = new Pacientes("Andressa","Queimadura","3");
+const paciente09 = new Pacientes("Maria","Alergia","2");
+const paciente10 = new Pacientes("Jayro","Desmaios","1");
 
+console.log(paciente01);
+console.log(paciente02);
+console.log(paciente03);
+console.log(paciente04);
+console.log(paciente05);
+console.log(paciente06);
+console.log(paciente07);
+console.log(paciente08);
+console.log(paciente09);
+console.log(paciente10);
+
+Pacientes.prototype.grav = function(){
+    if(this.gravidade >= 9){
+        console.log("Gravissimo");
+    }else if(this.gravidade > 5 && this.gravidade < 9 ){
+        console.log("Grave");
+    }else if(this.gravidade <= 5 && this.gravidade > 3){
+        console.log("medio");
+    }else{
+        console.log("Baixa");
+    }
+}
+paciente01.grav();
+paciente02.grav();
+paciente03.grav();
+paciente04.grav();
+paciente05.grav();
+paciente06.grav();
+paciente07.grav();
+paciente08.grav();
+paciente09.grav();
+paciente10.grav();
+
+console.clear();
+class Humano {
+    constructor(nome,idade){
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
+const matheus = new Humano("Matheus",31);
+console.log(matheus);
+
+Humano.prototype.idade = "Não Definido";
+console.log(Humano.prototype.idade);
+console.log(matheus.idade);
+
+//add metodos adiconais nas classes 
+// pois não são como objetos
+// que podemos adicionar facilmente ao objeto
+
+class Aviao {
+    constructor(marca,turbinas){
+        this.marca = marca;
+        this.turbinas = turbinas;
+    }
+}
+const asas = Symbol();
+const pilotos = Symbol();
+
+Aviao.prototype[asas] = 2;
+Aviao.prototype[pilotos] = 3;
+
+const boing = new Aviao("Boing",10);
+console.log(boing)
+console.log(boing[asas]);
+console.log(boing[pilotos]);
+
+class post {
+    constructor(titulo,descricao,tags){
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.tags = tags;
+    }
+    get exibirtitulo(){
+        return `Você esta lendo: ${this.titulo}`;
+    }
+    set adicionarTags(tags){
+        const tagsArray = tags.split(", ");
+        this.tags = tagsArray;
+    }
+}
+const myPost = new post("Algum post","é uma limguage, etc....");
+console.log(myPost);
+console.log(myPost.exibirtitulo);
+console.log(myPost.descricao);
+
+myPost.adicionarTags  = "Programação, JavaScript, Python, I.A,"
+console.log(myPost);
+
+class Mamifero {
+    constructor(patas){
+        this.patas = patas;
+    }
+}
+
+class Lobo extends Mamifero  {
+    constructor(patas,alimentacao){
+        super (patas,alimentacao);
+        this.alimentacao = alimentacao;
+    }
+}
+
+const lobo1 = new Lobo(4,"Carnivoro");
+console.log(lobo1);
+// verifica herança
+console.log(lobo1 instanceof Lobo);
+console.log(Lobo instanceof Mamifero);
